@@ -1,0 +1,55 @@
+.app-nav {
+  position: fixed;
+  background-color: var(--theme-color, #21222b );
+  width: 100%;
+  margin: 0;
+  margin-right: 20 !important;
+  font-size: 18px;
+  padding: 17px;
+  color: #ff79c6;
+  transition: 0.2s;
+}
+
+.app-nav li {
+  display: inline-block;
+  margin: 0 1.3rem;
+  padding: 5px 0;
+  position: relative;
+}
+
+.app-nav p img:nth-child(1) {
+  width: 24px;
+  float: left;
+}
+
+.app-nav p:nth-child(2) {
+  float: left;
+  font-weight: 600;
+  margin-left: 16px;
+}
+
+.app-nav li ul {
+  background-color: #333038;
+  border: 0px solid #b0b0b0;
+  border-bottom-color: #a3a3a3;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: none;
+  max-height: calc(100vh - 61px);
+  overflow-y: auto;
+  padding: 10px 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: justify;
+  top: 100%;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.app-nav .badge {
+  min-width: 85px !important;
+  max-width: 85px;
+  float: right !important;
+  margin-left: 10px;
+}
