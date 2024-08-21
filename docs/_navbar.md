@@ -2,8 +2,8 @@
 
   - [Blog](blog/index)
 
-  - [Resume](resume/cv.html)
-    - [View](resume/cv.html)
+  - [Resume](https://daniws.github.io/daniel-docs/resume/cv.html)
+    - [View](https://daniws.github.io/daniel-docs/resume/cv.html)
     - [Download PDF](configuration.md)
 
   - [Contact Me](mailto:dani010lenin@gmail.com)
