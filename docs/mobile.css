@@ -1,6 +1,7 @@
 @media only screen and (max-width: 600px) {
   body {
     font-size: 11px;
+    padding-bottom: 0;
   }
 
   .app-nav li {
@@ -67,24 +68,36 @@
 
 @media (max-width: 768px) {
   body {
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 
-  .footer-content {
-    flex-direction: column;
-    align-items: flex-start;
+
+  .app-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+    padding: 6px;
   }
 
-  .footer-content>span:last-child {
+
+    .footer-content {
+      display: none;
+    }
+
+ /*  .footer-content>span:last-child {
+    display: none;
     margin-top: 5px;
     margin-bottom: -8px;
     font-size: 1px;
     word-spacing: 10em;
   }
-  
+
   .footer-content>.footer-text {
-    font-size: 9px;
-  }
+    display: none;
+    font-size: 5px;
+  } */
   .toc-container {
     display: none;
   }

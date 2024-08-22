@@ -18,8 +18,7 @@
   <div id="app"></div>
   <script>
     // Footer content: gl, gh and li links
-    const footer = `<div class="footer-content" style='position: fixed; bottom: 0; left: 0; right: 0; background-color: #282a36; padding: 10px; color: gray; font-size: 16px; display: flex; justify-content: space-between; align-items: center;'>
-      <span class="footer-text">Dani | {docsify-updated}</span>
+    const footer = `<div class="footer-content" style='position: fixed; bottom: 0; left: 0; right: 0; background-color: #282a36; padding: 10px; color: gray; font-size: 16px; display: flex; justify-content: space-between; align-items: center;'>      <span class="footer-text">Dani | {docsify-updated}</span>
       <span>
         <a href='https://gitlab.com' style='margin-left: 15px;'><img src='media/gitlab_2.png' alt='GitLab' height='29' style='transition: transform 0.2s; transform-origin: center;' onmouseover='this.style.transform="scale(1.4)"' onmouseout='this.style.transform="scale(1)"'></a>
         <a href='https://github.com' style='margin-left: 15px;'><img src='media/github.png' alt='GitHub' height='29' style='transition: transform 0.2s; transform-origin: center;' onmouseover='this.style.transform="scale(1.4)"' onmouseout='this.style.transform="scale(1)"'></a>
@@ -56,7 +55,29 @@
       plugins: [
         titlePlugin({
           suffix: ' | Daniel V'
-        })
+        }),
+        function(hook) {
+          hook.doneEach(function() {
+            const footerContent = document.querySelector('.footer-content');
+            if (footerContent) {
+              if (window.innerWidth <= 768) {
+                footerContent.style.display = 'none';
+              } else {
+                footerContent.style.display = 'flex';
+              }
+            }
+          });
+          window.addEventListener('resize', function() {
+            const footerContent = document.querySelector('.footer-content');
+            if (footerContent) {
+              if (window.innerWidth <= 768) {
+                footerContent.style.display = 'none';
+              } else {
+                footerContent.style.display = 'flex';
+              }
+            }
+          });
+        }
       ]
     }
 
