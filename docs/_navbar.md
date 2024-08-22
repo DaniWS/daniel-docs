@@ -1,6 +1,6 @@
   - [Home](home)
 
-  - [Blog](blog/index)
+  - [Blog](blog/blog)
 
   - [Resume](https://daniws.github.io/personal/resume/cv.html)
     - [View](https://daniws.github.io/personal/resume/cv.html)

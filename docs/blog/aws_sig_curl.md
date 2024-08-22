@@ -1,3 +1,5 @@
+<title>Signing AWS Sig V4 requests using curl and Postman</title>
+
 # Signing AWS Sig V4 requests using curl and Postman
 ![AWS](  https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 &nbsp;
@@ -96,9 +98,16 @@ SESSION_TOKEN=`curl -sS -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169
 ```
 &nbsp;
 
-With  this information, we can build the request as [shown previously](####format-of-a-signed-curl-request-as-IAM-role:).
+With  this information, we can build the request as [shown previously](#format-of-a-signed-curl-request-as-iam-role-or-any-type-of-short-lived-credentials).
 
 &nbsp;
 #### Signing requests using Postman
 
 Knowing the process to sign requests both with long-lived (e.g. IAM users) and short-lived (e.g. IAM roles) credentials, we can apply the same principle to Postman requests. For step-by-step instructions, you can check out their [documentation](https://learning.postman.com/docs/sending-requests/authorization/aws-signature/) on the topic.
+
+You can find more information on AWS SigV4, and it's integration with cURL and Postman below.
+
+#### Resources
+- [AWS Request Signing](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-signing.html)
+- [Curl AWS Signature](https://curl.se/libcurl/c/CURLOPT_AWS_SIGV4.html)
+- [Postman AWS Signature](https://learning.postman.com/docs/sending-requests/authorization/aws-signature/)

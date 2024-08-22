@@ -1,11 +1,17 @@
 .app-nav {
   position: fixed;
+  /* Google font */
+  font-family: "Press Start 2P", system-ui;
+  letter-spacing: 0px;
+  padding: 13px;
+  font-size: 8px;
+  /* Google font */
   background-color: var(--theme-color, #21222b );
   width: 100%;
   margin: 0;
   margin-right: 20 !important;
-  font-size: 18px;
-  padding: 17px;
+  /* font-size: 18px;
+  padding: 17px; */
   color: #ff79c6;
   transition: 0.2s;
 }
@@ -52,4 +58,13 @@
   max-width: 85px;
   float: right !important;
   margin-left: 10px;
+}
+
+.app-nav li a {
+  color: rgba(255, 255, 255, 0.796);
+  font-size: 13px;
+}
+
+.app-nav li ul li a {
+  font-size: 12px;
 }
