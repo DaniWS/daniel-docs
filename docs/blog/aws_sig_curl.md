@@ -107,6 +107,7 @@ Knowing the process to sign requests both with long-lived (e.g. IAM users) and s
 
 You can find more information on AWS SigV4, and it's integration with cURL and Postman below.
 
+&nbsp;
 #### Resources
 - [AWS Request Signing](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-signing.html)
 - [Curl AWS Signature](https://curl.se/libcurl/c/CURLOPT_AWS_SIGV4.html)

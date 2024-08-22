@@ -1,6 +1,6 @@
 @media only screen and (max-width: 600px) {
   body {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .app-nav li {
@@ -13,7 +13,7 @@
   }
 
   .markdown-section h1 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     margin: 0 0 1rem;
   }
 
@@ -29,6 +29,9 @@
 
   .markdown-section h4 {
     font-size: 0.875rem;
+  }
+  .markdown-section>* {
+    font-size: 10px;
   }
 
   .markdown-section pre>code {
@@ -74,21 +77,44 @@
 
   .footer-content>span:last-child {
     margin-top: 5px;
-    margin-bottom: -10px;
+    margin-bottom: -8px;
     font-size: 1px;
     word-spacing: 10em;
   }
-  .footer-content .footer-text {
-    font-size: 10px;
+  
+  .footer-content>.footer-text {
+    font-size: 9px;
   }
-
   .toc-container {
     display: none;
   }
 
-
   aside.toc-nav {
     max-width: 0px;
     opacity: 0;
+  }
+  .app-nav li ul li a {
+    font-size: 0.6em;  /* Reduce font size slightly */
+    letter-spacing: -0.05em;  /* Reduce letter spacing */
+  }
+
+  .app-nav li ul li {
+    margin: 2px 8px;  /* Reduce vertical margin */
+    padding: 3px 0;  /* Reduce vertical padding */
+  }
+
+  /* New styles for badges */
+  /* Tightly grouped badge styles */
+  p:has(img[src*="img.shields.io"]) {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  img[src*="img.shields.io"] {
+    transform: scaleY(0.8);
+    transform-origin: center top;
+    margin: -3px;
+    vertical-align: top;
   }
 }
