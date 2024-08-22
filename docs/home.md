@@ -15,11 +15,8 @@
 <br>
 
 
-I'm a Platform/Systems Engineer based in Dublin - former Elasticsearch Subject Matter Expert (SME) **@ AWS** -. Interested in **ethical** hacking and FAI league futsal player | **웃. ⨅** | in my free time.
+I'm a Platform/Systems Engineer based in Dublin - former Elasticsearch Subject Matter Expert (SME) **<span style="color: #76b5c5;">@ AWS</span>** -. Interested in **<span style="color: #76b5c5;">ethical</span>** hacking and FAI league futsal player | **<span style="color: #76b5c5;">웃. ⨅</span>** | in my free time.
 
 Currently working on cloud-based systems and internal platform maintenance, with an emphasis on security and reliability.
 
 Graduated with a BEng in Electronics & Telecom from Cuba in 2017, followed by an MSc in IoT from Madrid. Still tinkering with tech for the fun of it.
-
-
-
