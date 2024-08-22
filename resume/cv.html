@@ -1,0 +1,704 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Daniel Vilela</title><style>
+
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 1180px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+
+body {
+    background-color: #fef3f0;
+}
+
+
+body {
+	line-height: 1.5em;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.0em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0.5em;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: -0.3em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 9rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 1em;
+	margin-bottom: -0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+    fill: rgb(254, 243, 240);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+    color: rgb(132, 100, 66);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1bfda330-9ce0-46ba-a1a1-e66d63c0c656" class="page mono"><header><div class="page-header-icon undefined"><img class="icon" src="cv/ProfilePic.png"/></div><h1 class="page-title">Daniel Vilela</h1><p class="page-description"></p></header><div class="page-body"><div id="9b47c2cc-198c-4de5-8b3b-a51689dff98b" class="column-list"><div id="ac7e42b9-9317-4494-a6fd-9b92eb5f392c" style="width:68.75%" class="column"><h1 id="64d6e9ee-bfe4-4a73-adec-c2b2bf470d8d" class="">Work Experience</h1><hr id="20d89000-475b-4d6d-85ee-a7ab8b0606ef"/><h3 id="f0a7cf7d-1f46-4f97-bb4b-7cce86fa6a97" class=""><mark class="highlight-brown"><mark class="highlight-default_background">Platform Engineer</mark></mark></h3><p id="5caf84a5-e315-49a8-bbb6-50e6a42d1aad" class=""><mark class="highlight-gray"><a href="https://therapieclinic.com">Therapie Group</a></mark><mark class="highlight-gray"> | Dublin IE | 11/2022 – Current</mark></p><p id="34125ffa-3844-458a-8d36-0ccf8abe9496" class="">
+</p><ul id="45182f74-6f8e-4c91-8c9a-081fa7666c67" class="bulleted-list"><li style="list-style-type:disc">Maintenance and development of cloud infrastructure.</li></ul><ul id="9093d293-3828-426e-9b9e-90f746667927" class="bulleted-list"><li style="list-style-type:disc">Automation of internal workflows to ensure the self-sufficiency of developer teams.</li></ul><ul id="58d8b084-3394-49bc-8d01-0200282f6573" class="bulleted-list"><li style="list-style-type:disc">Monitoring and observability of applications and infrastructure.</li></ul><ul id="6d5cd000-c42e-46c6-90b0-d8a06ccbdfdd" class="bulleted-list"><li style="list-style-type:disc">Enforcement of security and high availability best practices.</li></ul><ul id="ab2d7060-35f4-4f5a-b154-93e023b03ce8" class="bulleted-list"><li style="list-style-type:disc">The stack I&#x27;ve worked with in this role includes:<ul id="a4a8dafc-f1e7-433e-8b52-4568f6d0ea18" class="bulleted-list"><li style="list-style-type:circle"><strong>AWS, Azure, Confluent Cloud</strong> <mark class="highlight-gray">(Kafka) </mark>and<mark class="highlight-gray"> </mark><strong>DataDog</strong>.</li></ul><ul id="351aaba2-b91f-4b4f-aa80-2ccbde82b0c3" class="bulleted-list"><li style="list-style-type:circle"><strong>Kubernetes, Pulumi</strong> and <strong>Terraform</strong> <mark class="highlight-gray">(IaC)</mark>.</li></ul><ul id="104364ca-b894-4907-9e52-5056283b56ce" class="bulleted-list"><li style="list-style-type:circle"><strong>Gitlab</strong> <strong>Pipelines</strong> <mark class="highlight-gray">(CI)</mark><strong>,</strong><mark class="highlight-gray"> </mark><strong>ArgoCD</strong> <mark class="highlight-gray">(CD)</mark>.</li></ul><ul id="9398fa4e-098a-4da8-aab3-4d83b234fa3a" class="bulleted-list"><li style="list-style-type:circle"><strong>Ansible </strong><mark class="highlight-gray">(Configuration management)</mark>.</li></ul><ul id="ca99bea0-4607-4ebe-a964-36fd8aa0b91f" class="bulleted-list"><li style="list-style-type:circle">Other services like: <mark class="highlight-default">nginx, vault, kafka, nexus, snyk, jira, fivetran, mongodb, redis, etc.</mark></li></ul></li></ul><p id="daf836f3-9757-4739-bb1e-958533e1de9b" class="">
+</p><h3 id="392757f9-aa43-4c3b-a73d-2e9f8b705dad" class=""><mark class="highlight-brown"><mark class="highlight-default_background">Premium Support Engineer - Analytics</mark></mark></h3><p id="58fc3ad3-5b0d-46ae-ac90-6c6a93db6a2b" class=""><mark class="highlight-gray"><a href="http://aws.amazon.com">Amazon Web Services </a></mark><mark class="highlight-gray">| Dublin IE | 09/2020 – 10/2022 </mark></p><p id="107798bf-980e-4ca4-ac13-2aeacdb9e9ae" class="">
+</p><p id="8a2bbcdb-e9e0-4a5c-9d93-f766e135b5c1" class="">As part of the Analytics Premium Support team, I provided specialised support for AWS analytics services, and their integration with AWS core services (e.g. <strong>IAM</strong>, <strong>EC2</strong>, <strong>ELB</strong>, <strong>DynamoDB</strong>, <strong>VPC</strong>, etc.). These Analytics services include:</p><ul id="e02cfc2e-0d84-4bfd-84f6-ca5a6769363c" class="bulleted-list"><li style="list-style-type:disc"><strong>Amazon OpenSearch</strong> <mark class="highlight-gray">(Successor to Elasticsearch)</mark>.</li></ul><ul id="73a610e0-e7d2-448e-9cf8-ca42d0e09989" class="bulleted-list"><li style="list-style-type:disc"><strong>Managed Streaming for Kafka</strong>.</li></ul><ul id="2aafbf4f-3265-4d90-be30-684d88036c95" class="bulleted-list"><li style="list-style-type:disc"><strong>Kinesis Suite</strong>.</li></ul><ul id="bf973ac9-2003-4c84-babd-99dae71804db" class="bulleted-list"><li style="list-style-type:disc"><strong>CloudSearch</strong>.</li></ul><p id="9bc288de-0010-4368-871c-a46f4ec31d8d" class="">
+</p><p id="56af928b-69ed-4f96-97db-ddbdde74c632" class="">As an Elasticsearch specialist, I provided consultation services to enterprise customers; and was involved in internal projects to improve the service.</p><p id="19680dbe-825a-4738-9964-5710ee620c8c" class="">
+</p><h3 id="80552136-909d-4a15-841d-85842701d3bd" class=""><mark class="highlight-brown"><mark class="highlight-default_background"><strong>Research engineer</strong></mark></mark></h3><p id="335b38de-0197-4a49-a2b5-2790c98a6648" class=""><a href="http://www.upm.es/">GRYS</a> (UPM) <mark class="highlight-gray">| Madrid ES | 12/2019 – 09/2021 </mark></p><p id="0d2dcc15-5ac5-4869-8255-e7164879628e" class="">
+</p><p id="05ee0b31-c3df-45b3-acf3-7932d5e5e98e" class="">Development of a semantic middleware for European IoT project AFarCloud, involving the following tasks:</p><ul id="59856885-2e76-40be-af60-a86692bb53e8" class="bulleted-list"><li style="list-style-type:disc">Implementation of RESTful APIs and MQTT communications using Java and Docker. </li></ul><ul id="b6e642f9-7c2c-4e16-8be8-0e3f9b7f3885" class="bulleted-list"><li style="list-style-type:disc">Design and validation of JSON schemas and information models used by field sensors and actuators.</li></ul><ul id="3ef0d007-2ab4-48ae-bbc5-aadaea6facad" class="bulleted-list"><li style="list-style-type:disc">Centralized log monitoring system implementation using the Elastic Stack (ELK).</li></ul><p id="a05b7231-a410-4558-b878-79c46350e5ff" class="">
+</p><h3 id="f7ee8a38-cede-4b67-b53e-966c095da182" class=""><mark class="highlight-brown"><mark class="highlight-default_background"><strong>Electronics engineer - Internship</strong></mark></mark></h3><p id="096e3f52-847d-419d-bb78-4a3d1ff1a6a0" class="">XSolucion<mark class="highlight-gray"> | Havana CU | 01/2017 – 08/2017 </mark></p><p id="03f5a7a9-b923-40df-bd25-d14488d8ad1e" class="">
+</p><ul id="55047fa2-dbfe-4ed8-bbe6-3223da7eea5a" class="bulleted-list"><li style="list-style-type:disc">Maintenance of the local area network (LAN).</li></ul><ul id="c8dece2e-e9a5-445d-a722-c1979ae6a4c4" class="bulleted-list"><li style="list-style-type:disc">Power and Signal to Noise Ratio measurements in urban areas for the adequate reception of Digital Terrestrial Television.</li></ul><p id="8665ddb6-882b-4bad-8d0a-cba8ebf0c180" class="">
+</p><h1 id="3d28f075-2f8e-45c2-8728-044d542c76e7" class="">Education</h1><hr id="eacfeb44-3215-40c8-b9ac-a7f6536de0d5"/><h3 id="a2e7eb05-4499-4902-a626-c72ed0e60e62" class=""><mark class="highlight-brown"><mark class="highlight-default_background">Master&#x27;s Degree in IoT (Internet of Things) </mark></mark></h3><p id="1271057e-c3ab-4cab-a574-13438e91de9b" class=""><a href="https://masteriot.etsist.upm.es/">Polytechnic University of Madrid</a> <mark class="highlight-gray">(UPM)</mark> <mark class="highlight-gray"> | 09/2019 - 07/2020</mark></p><p id="72581a46-37b0-40da-aa24-1cd571110927" class="">
+</p><h3 id="9316c115-a67f-4373-8f9a-e0f2330da1f6" class=""><mark class="highlight-brown"><mark class="highlight-default_background"><strong>Telecommunications and Electronics Engineering Degree</strong></mark></mark></h3><p id="2e1fa3f4-57d5-4345-81e1-c0d7d8ad3127" class=""><mark class="highlight-gray">Technological University of Havana (UTH) | 09/2011 - 06/2017</mark></p><h1 id="3355d8db-9a8f-41c2-8a1e-1ff674d45160" class="">Courses and Certifications</h1><hr id="47e8208c-7b8d-41a7-b9ae-375fe9db8251"/><ul id="0bca1a16-8ea3-4ae8-9b95-fe6f25fa0019" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.credly.com/badges/9294de01-b082-4bbe-976b-c7cdaf239730/">AWS CERTIFIED DEVELOPER</a> <mark class="highlight-gray">| 2022</mark></li></ul><ul id="ea7109e2-9268-40d2-a238-0b9898df59cf" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.notion.so/TikTok-https-www-tiktok-com-video-Atleta-Espa-ola-Laura-Martinez-viral-atleta-atletaespa--4b4a042c24a14fd6aa92b4ab9ba8518f?pvs=21">AWS Elasticsearch/Opensearch Subject Matter Expert (SME)</a> <mark class="highlight-gray">| 2022</mark></li></ul><ul id="32fa7f75-48b2-429c-8227-e6e2d73016bf" class="bulleted-list"><li style="list-style-type:disc">Coursera<strong> </strong>&quot;Data Science with Python&quot; - University of Michigan <mark class="highlight-gray">| 2018</mark>  </li></ul><ul id="d0e63ac1-dde2-403c-aaf3-26bb5d424d86" class="bulleted-list"><li style="list-style-type:disc">Udemi<strong> </strong>&quot;Cisco CCNA R&amp;S 200-125&quot; <mark class="highlight-gray">| 2017</mark></li></ul><p id="ca1796ef-561a-4f14-8378-4643411f9409" class="">
+</p></div><div id="aaa133c2-d66c-4f3b-9c20-d8f6ded38915" style="width:31.25%" class="column"><h1 id="bb5650f3-6bd2-4f5a-a6cb-c89137a137d3" class=""><mark class="highlight-gray">Contact</mark></h1><hr id="e469fdb0-a33d-433b-bbe3-c43af367a746"/><p id="82dac3a0-920c-47da-ba41-3706ef4f52da" class="">E: dani010@email.com</p><p id="4b515404-afec-4659-9325-35c10ef00515" class="">T: +353 (0) 89 4674349</p><p id="aa7781bb-bf59-4db1-b7a3-4266472c1ff0" class=""><a href="https://www.linkedin.com/in/daniel-vilela-garcía-580001197/">LinkedIn</a></p><h1 id="1496a76a-0ec1-4bf5-9110-2395c4aaa843" class=""><mark class="highlight-gray">Languages</mark></h1><hr id="eb3f964c-759e-4f05-994d-580550a5f7fc"/><table id="d630680c-90fe-45ba-a86a-553e76be5cbc" class="simple-table"><tbody><tr id="aff87011-970d-4eee-b75d-a3c4a811e8b6"><td id="aDcU" class="" style="width:121px">Spanish</td><td id="llI|" class="" style="width:117px">Native</td></tr><tr id="28eb1542-4248-4d0a-9329-d1235bb3edb4"><td id="aDcU" class="" style="width:121px">English</td><td id="llI|" class="" style="width:117px">Fluent</td></tr></tbody></table><h1 id="c9bd0f47-48c2-4a39-ba28-3c1b2a95ce4b" class=""><mark class="highlight-gray">Interests</mark></h1><hr id="bc43757c-d082-4d2c-b5b3-b0d6f9b34eb6"/><ul id="1f2abda0-e137-4f25-a6f2-ca6a2eadeac2" class="bulleted-list"><li style="list-style-type:disc">Ethical hacking</li></ul><ul id="f480cd4a-029f-4726-8ae4-9e590ee6f963" class="bulleted-list"><li style="list-style-type:disc">Futsal</li></ul><h1 id="9385dc2e-b958-4974-a038-9f5944958136" class=""><mark class="highlight-gray">Digital Skills</mark></h1><hr id="740db304-538d-4df7-9d53-f9821c26cfab"/><ul id="94895fb5-f648-4842-bbe7-af40c546e4ba" class="bulleted-list"><li style="list-style-type:disc"><strong>Coding</strong><br/><br/><mark class="highlight-gray">Java | Python | ASM, JS, Arduino (basic) </mark></li></ul><ul id="c2327f9d-6e98-4a14-9d54-c5e0d4f91666" class="bulleted-list"><li style="list-style-type:disc"><strong>Networking</strong></li></ul><ul id="183b5f59-313a-443d-98b5-f7c0a082d562" class="bulleted-list"><li style="list-style-type:disc"><strong>IT</strong><br/><br/><mark class="highlight-gray">Linux | AWS | Azure | ElasticSearch (ELK) | NoSQL | Kafka | IoT | K8s | Observability &amp; Monitoring | CI/CD | DevOps</mark></li></ul><p id="e07e3572-ff82-49f8-b638-74554c1ba261" class="">
+</p></div></div><p id="9b842da8-1412-487a-b2b0-2d4098b9778b" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
