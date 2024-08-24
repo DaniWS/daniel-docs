@@ -10,7 +10,7 @@
 <p align="left"><img alt="Shell" src="media/pixel art.gif" width="150" height="150"></p>
 
 
-<h1 style="font-size: 3.2em; color: #9a7eed;">Hi, I'm Dani!</h1>
+<div class="supheader" style="color: #9a7eed;">Hi, I'm Dani!</div>
 
 <br>
 
