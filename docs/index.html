@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -56,8 +55,8 @@
         titlePlugin({
           suffix: ' | Daniel V'
         }),
-        function (hook) {
-          hook.doneEach(function () {
+        function(hook) {
+          hook.doneEach(function() {
             const footerContent = document.querySelector('.footer-content');
             if (footerContent) {
               if (window.innerWidth <= 768) {
@@ -67,7 +66,7 @@
               }
             }
           });
-          window.addEventListener('resize', function () {
+          window.addEventListener('resize', function() {
             const footerContent = document.querySelector('.footer-content');
             if (footerContent) {
               if (window.innerWidth <= 768) {
@@ -102,17 +101,5 @@
   <!-- Footer  -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
   <!-- Mobile view -->
-  <script>
-    function logViewportWidth() {
-      console.log('Viewport width:', window.innerWidth);
-    }
-
-    // Log on page load
-    logViewportWidth();
-
-    // Log on window resize
-    window.addEventListener('resize', logViewportWidth);
-  </script>
 </body>
-
 </html>
