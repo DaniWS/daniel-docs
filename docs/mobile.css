@@ -1,7 +1,16 @@
 @media only screen and (max-width: 600px) {
+  .supheader {
+    font-size: 2em !important;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
   body {
     font-size: 0.75rem;
     padding-bottom: 0;
+    /* fppter */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
 
   .app-nav li {
@@ -54,11 +63,12 @@
     padding: 1em 0.0625rem;
     white-space: inherit;
   }
-
-  .markdown-section figure,
   .markdown-section p {
     margin: 0;
-    line-height: 1rem;
+    line-height: 1.4rem;
+    font-size: 0.9rem;
+    line-height: 1.5rem !important;
+    padding: 0.5rem !important;
   }
   .markdown-section>* {
     box-sizing: border-box;
@@ -80,25 +90,76 @@
     margin: -0.1875rem;
     vertical-align: top;
   }
+  /* Fixed to viewport */
+  /* .footer-content {
+    position: static !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.2rem !important;
+    font-size: 0.6rem !important;
+    line-height: 1.5 !important;
+    margin-top: 2rem !important;
+  }
+  .footer-content img {
+    height: 1.5rem !important;
+    width: auto !important;
+  }
+  .markdown-section {
+    padding-bottom: 0 !important;
+  } */
 
+   /* Fixed to bottom */
+  /* .footer-content {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.2rem !important;
+    font-size: 0.6rem !important;
+  }
+
+  .footer-content > * {
+    margin: 0 0.25rem !important;
+  }
+
+  .footer-content img {
+    height: 20px !important;
+    width: auto !important;
+  }
+*/
   .footer-content {
+    display: none;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
     background-color: #282a36;
-    padding: 0.625rem;
-    color: gray;
-    font-size: 1rem;
-    display: flex;
+    padding: 0.2rem;
+    font-size: 0.6rem;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
+  }
+
+  .footer-content.visible {
+    display: flex;
+  }
+
+  .footer-content > * {
+    margin: 0 0.25rem;
+  }
+
+  .footer-content img {
+    height: 20px;
+    width: auto;
   }
 }
 
 @media only screen and (min-width: 600px) {
+  .supheader {
+    font-size: 3.2em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
   .app-nav {
     position: fixed;
     top: 0;
