@@ -1,16 +1,18 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   body {
-    font-size: 11px;
+    font-size: 0.75rem;
     padding-bottom: 0;
   }
 
   .app-nav li {
     margin: 0 1rem;
+    text-align: left;
   }
 
   .app-nav li a {
-    margin: 0 0rem;
-    font-size: 8px;
+    margin: 0;
+    font-size: 0.5rem;
+    text-align: left;
   }
 
   .markdown-section h1 {
@@ -20,100 +22,48 @@
 
   .markdown-section h2 {
     font-size: 0.875rem;
-    margin: 45px 0 0.8rem;
+    margin: 2.8125rem 0 0.8rem;
   }
 
   .markdown-section h3 {
     font-size: 0.875rem;
-    margin: 40px 0 0.6rem;
+    margin: 2.5rem 0 0.6rem;
   }
 
   .markdown-section h4 {
     font-size: 0.875rem;
   }
+
   .markdown-section>* {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 
   .markdown-section pre>code {
     -moz-osx-font-smoothing: initial;
     -webkit-font-smoothing: initial;
     background-color: #1e1e25;
-    border-radius: 2px;
+    border-radius: 0.125rem;
     color: #c0c0c0;
     display: block;
     font-family: Roboto Mono, Monaco, courier, monospace;
     font-size: 0.6rem;
     line-height: inherit;
-    margin: 0 1px;
+    margin: 0 0.0625rem;
     max-width: inherit;
     overflow: inherit;
-    padding: 1em 1px;
+    padding: 1em 0.0625rem;
     white-space: inherit;
   }
 
   .markdown-section figure,
   .markdown-section p {
-    margin: 0em 0;
+    margin: 0;
     line-height: 1rem;
   }
-
   .markdown-section>* {
     box-sizing: border-box;
     font-size: inherit;
     margin-top: 0.3em;
-  }
-
-}
-
-@media (max-width: 768px) {
-  body {
-    padding-bottom: 0;
-  }
-
-
-  .app-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    transition: transform 0.3s ease-in-out;
-    padding: 6px;
-  }
-
-
-    .footer-content {
-      display: none;
-    }
-
- /*  .footer-content>span:last-child {
-    display: none;
-    margin-top: 5px;
-    margin-bottom: -8px;
-    font-size: 1px;
-    word-spacing: 10em;
-  }
-
-  .footer-content>.footer-text {
-    display: none;
-    font-size: 5px;
-  } */
-  .toc-container {
-    display: none;
-  }
-
-  aside.toc-nav {
-    max-width: 0px;
-    opacity: 0;
-  }
-  .app-nav li ul li a {
-    font-size: 0.6em;  /* Reduce font size slightly */
-    letter-spacing: -0.05em;  /* Reduce letter spacing */
-  }
-
-  .app-nav li ul li {
-    margin: 2px 8px;  /* Reduce vertical margin */
-    padding: 3px 0;  /* Reduce vertical padding */
   }
 
   /* New styles for badges */
@@ -127,7 +77,49 @@
   img[src*="img.shields.io"] {
     transform: scaleY(0.8);
     transform-origin: center top;
-    margin: -3px;
+    margin: -0.1875rem;
     vertical-align: top;
+  }
+
+  .footer-content {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #282a36;
+    padding: 0.625rem;
+    color: gray;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .app-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+    padding: 0.375rem;
+  }
+
+  /* Leave some margin before footer */
+  .markdown-section {
+    padding-bottom: 8rem;
+ }
+
+  .app-nav li ul li a {
+    font-size: 0.6em;
+    letter-spacing: -0.05em;
+  }
+
+  .app-nav li ul li {
+    margin: 0.125rem 0.5rem;
+    padding: 0.1875rem 0;
   }
 }

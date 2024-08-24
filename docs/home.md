@@ -20,3 +20,4 @@ I'm a Platform/Systems Engineer based in Dublin - former Elasticsearch Subject M
 Currently working on cloud-based systems and internal platform maintenance, with an emphasis on security and reliability.
 
 Graduated with a BEng in Electronics & Telecom from Cuba in 2017, followed by an MSc in IoT from Madrid. Still tinkering with tech for the fun of it.
+

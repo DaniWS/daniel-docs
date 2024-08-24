@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <link rel="icon" href="media/the_dude.ico" type="image/x-icon">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/A5yncX/docsify-theme-darcula@v1.0/darcula.css">
   <link rel="stylesheet" href="./navbar-darcula-fixed.css">
   <link rel="stylesheet" href="./toc-darcula.css">
@@ -55,8 +56,8 @@
         titlePlugin({
           suffix: ' | Daniel V'
         }),
-        function(hook) {
-          hook.doneEach(function() {
+        function (hook) {
+          hook.doneEach(function () {
             const footerContent = document.querySelector('.footer-content');
             if (footerContent) {
               if (window.innerWidth <= 768) {
@@ -66,7 +67,7 @@
               }
             }
           });
-          window.addEventListener('resize', function() {
+          window.addEventListener('resize', function () {
             const footerContent = document.querySelector('.footer-content');
             if (footerContent) {
               if (window.innerWidth <= 768) {
@@ -101,5 +102,17 @@
   <!-- Footer  -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
   <!-- Mobile view -->
+  <script>
+    function logViewportWidth() {
+      console.log('Viewport width:', window.innerWidth);
+    }
+
+    // Log on page load
+    logViewportWidth();
+
+    // Log on window resize
+    window.addEventListener('resize', logViewportWidth);
+  </script>
 </body>
+
 </html>
