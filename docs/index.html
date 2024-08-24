@@ -76,7 +76,39 @@
               }
             }
           });
-        }
+        },
+        function(hook) {
+  hook.afterEach(function(html, next) {
+    html += `
+      <div class="mobile-widget">
+        <div class="mobile-widget-toggle">+</div>
+        <div class="mobile-widget-content">
+          <div class="mobile-widget-close"></div>
+          <a href="https://gitlab.com"><img src="media/gitlab_2.png" alt="GitLab" class="mobile-widget-icon"></a>
+          <a href="https://github.com"><img src="media/github.png" alt="GitHub" class="mobile-widget-icon"></a>
+          <a href="https://linkedin.com"><img src="media/linkedin.png" alt="LinkedIn" class="mobile-widget-icon"></a>
+        </div>
+      </div>
+    `;
+    next(html);
+  });
+
+  hook.doneEach(function() {
+    const widget = document.querySelector('.mobile-widget');
+    const toggle = document.querySelector('.mobile-widget-toggle');
+    const close = document.querySelector('.mobile-widget-close');
+
+    if (widget && toggle && close) {
+      toggle.addEventListener('click', function() {
+        widget.classList.add('expanded');
+      });
+      close.addEventListener('click', function() {
+        widget.classList.remove('expanded');
+      });
+    }
+  });
+}
+
       ]
     }
 
@@ -95,6 +127,7 @@
       }
     }
   </script>
+
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
