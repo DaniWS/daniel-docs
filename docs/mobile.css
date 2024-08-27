@@ -29,6 +29,11 @@
     display: flex;
     align-items: center;
   }
+
+  .app-nav.no-badge{
+    background: linear-gradient(135deg, #114443, #362056);
+  }
+
   .app-nav ul {
     margin-top: -0.9rem; /* Keep the text at the top */
   }
@@ -260,4 +265,8 @@
     margin: 0.125rem 0.5rem;
     padding: 0.1875rem 0;
   }
+  .app-nav.no-badge{
+    background: linear-gradient(135deg, #114443, #362056);
+  }
+
 }
