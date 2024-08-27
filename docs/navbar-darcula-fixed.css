@@ -132,3 +132,67 @@
     font-size: 0.5rem;
   }
 }
+
+@media only screen and (max-width: 600px) {
+
+  .app-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+    padding: 0.375rem;
+    height: 2rem;
+    /* Increase the height of the nav bar */
+    display: flex;
+    align-items: center;
+  }
+
+  .app-nav.no-badge {
+    background: linear-gradient(135deg, #114443, #362056);
+  }
+
+  .app-nav ul {
+    margin-top: -0.1rem;
+    /* Keep the text at the top */
+  }
+
+  .app-nav li {
+    line-height: 1;
+    /* Adjust line height to keep text compact */
+  }
+
+  .app-nav li {
+    margin: 0 1rem;
+    text-align: left;
+  }
+
+  .app-nav li a {
+    margin: 0;
+    font-size: 0.5rem;
+    text-align: left;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  .app-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+    padding: 0.375rem;
+  }
+
+  .app-nav li ul li a {
+    font-size: 0.9em;
+    letter-spacing: -0.05em;
+    padding: 0.7em;
+  }
+
+  .app-nav li ul li {
+    margin: 0.125rem 0.5rem;
+    padding: 0.1875rem 0;
+  }
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -55,8 +56,8 @@
         titlePlugin({
           suffix: ' | Daniel V'
         }),
-        function(hook) {
-          hook.doneEach(function() {
+        function (hook) {
+          hook.doneEach(function () {
             const footerContent = document.querySelector('.footer-content');
             if (footerContent) {
               if (window.innerWidth <= 768) {
@@ -66,7 +67,7 @@
               }
             }
           });
-          window.addEventListener('resize', function() {
+          window.addEventListener('resize', function () {
             const footerContent = document.querySelector('.footer-content');
             if (footerContent) {
               if (window.innerWidth <= 768) {
@@ -77,39 +78,40 @@
             }
           });
         },
-        function(hook) {
-  hook.afterEach(function(html, next) {
-    html += `
-      <div class="mobile-widget">
-        <div class="mobile-widget-toggle">+</div>
-        <div class="mobile-widget-content">
-          <div class="mobile-widget-close"></div>
-          <a href="https://gitlab.com"><img src="media/gitlab_2.png" alt="GitLab" class="mobile-widget-icon"></a>
-          <a href="https://github.com"><img src="media/github.png" alt="GitHub" class="mobile-widget-icon"></a>
-          <a href="https://linkedin.com"><img src="media/linkedin.png" alt="LinkedIn" class="mobile-widget-icon"></a>
-        </div>
-      </div>
-    `;
-    next(html);
-  });
+        function (hook) {
+          hook.afterEach(function (html, next) {
+            html += `
+              <div class="mobile-widget">
+                <div class="mobile-widget-toggle">+</div>
+                <div class="mobile-widget-content">
+                  <div class="mobile-widget-close"></div>
+                  <a href="https://gitlab.com"><img src="media/gitlab_2.png" alt="GitLab" class="mobile-widget-icon"></a>
+                  <a href="https://github.com"><img src="media/github.png" alt="GitHub" class="mobile-widget-icon"></a>
+                  <a href="https://linkedin.com"><img src="media/linkedin.png" alt="LinkedIn" class="mobile-widget-icon"></a>
+                </div>
+              </div>
+            `;
+            next(html);
+          });
 
-  hook.doneEach(function() {
-    const widget = document.querySelector('.mobile-widget');
-    const toggle = document.querySelector('.mobile-widget-toggle');
-    const close = document.querySelector('.mobile-widget-close');
-
-    if (widget && toggle && close) {
-      toggle.addEventListener('click', function() {
-        widget.classList.add('expanded');
-      });
-      close.addEventListener('click', function() {
-        widget.classList.remove('expanded');
-      });
-    }
-  });
-}
-
-      ]
+          hook.doneEach(function () {
+            const widget = document.querySelector('.mobile-widget');
+            const articleElement = document.querySelector('.article');
+            if (articleElement) {
+              widget.style.display = 'none';
+            }
+            const toggle = document.querySelector('.mobile-widget-toggle');
+            const close = document.querySelector('.mobile-widget-close');
+            if (toggle && close) {
+              toggle.addEventListener('click', function () {
+                widget.classList.add('expanded');
+              });
+              close.addEventListener('click', function () {
+                widget.classList.remove('expanded');
+              });
+            }
+          });
+        }]
     }
 
     // Title plugin
@@ -135,4 +137,5 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
   <!-- Mobile view -->
 </body>
+
 </html>
